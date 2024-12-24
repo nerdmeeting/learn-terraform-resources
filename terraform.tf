@@ -3,24 +3,24 @@
 
 terraform {
 
-  /* Uncomment this block to use Terraform Cloud for this tutorial
+  # /* Uncomment this block to use Terraform Cloud for this tutorial
   cloud {
-      organization = "organization-name"
+      organization = "nerdmeeting-cloud1"
       workspaces {
-        name = "learn-terraform-*"
+        name = "learn-terraform-resource"
       }
   }
-  */
+  # */
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.15.0"
+      version = "~> 4.16"
     }
     random = {
       source = "hashicorp/random"
     }
   }
 
-  required_version = "~> 1.2.0"
+  required_version = ">= 1.2.0"
 }
